@@ -27,14 +27,6 @@ public enum Config {
         	log.info("test properties loading.. " + testConfigFile);
 			prop.load(new FileInputStream(testConfigFile));
     		RestAssured.baseURI = prop.getProperty("hostname");
-    		
-			/*
-			 * String keysConfigFile = new File(".").getCanonicalPath() + File.separator +
-			 * "config" + File.separator + "qa" + File.separator + "keys.properties";
-			 * log.info("test properties loading.. " + keysConfigFile); prop.load(new
-			 * FileInputStream(keysConfigFile)); key = prop.getProperty("key"); cx =
-			 * prop.getProperty("cx");
-			 */
 
         } catch (Exception e) {
 			e.printStackTrace();
